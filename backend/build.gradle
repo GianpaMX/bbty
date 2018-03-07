@@ -1,0 +1,14 @@
+apply plugin: 'kotlin2js'
+
+group 'io.github.gianpamx'
+version '1.0-SNAPSHOT'
+
+compileKotlin2Js {
+    kotlinOptions.moduleKind = "commonjs"
+    kotlinOptions.outputFile = "${projectDir}/node_js/app.js"
+    kotlinOptions.sourceMap = true
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion"
+}
